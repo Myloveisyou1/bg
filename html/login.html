@@ -38,14 +38,14 @@
                                         <fieldset>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="用户名" />
+															<input type="text" class="form-control" placeholder="用户名" id="user_name"/>
 															<i class="ace-icon fa fa-user"></i>
 														</span>
                                             </label>
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="密码" />
+															<input type="password" class="form-control" placeholder="密码" id="user_password"/>
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
                                             </label>
@@ -60,7 +60,7 @@
 
                                                 <button type="button" class="width-35 pull-right btn btn-sm btn-primary">
                                                     <i class="ace-icon fa fa-key"></i>
-                                                    <span class="bigger-110">登录</span>
+                                                    <span class="bigger-110" onclick="login()">登录</span>
                                                 </button>
                                             </div>
 
@@ -213,6 +213,9 @@
 </div><!-- /.main-container -->
 
 <!-- inline scripts related to this page -->
+<script type="text/javascript" src="../static/assets/basic.js">
+
+</script>
 <script type="text/javascript">
     jQuery(function($) {
         $(document).on('click', '.toolbar a[data-target]', function(e) {
@@ -222,6 +225,44 @@
             $(target).addClass('visible');//show target
         });
     });
+
+    function login() {
+
+        var userName = $("#user_name").val();
+        var userPassword = $("#user_password").val();
+        if (userName == null || userName == "") {
+            alert("登录名不能为空");
+            return;
+        }
+        if (userPassword == null || userPassword == "") {
+            alert("密码不能为空");
+            return;
+        }
+        $.ajax({
+            url:URL+"login",
+            type:"get",
+            dataType:"json",
+            data:{
+                userName:userName,
+                password:userPassword
+            },
+            success:function(data){
+                console.log(data);
+                if(data.code == 200) {
+                    alert("login success");
+                    window.location.href = "main.html";
+                } else if(data.code == 404){
+                    window.location.href = "404.html";
+                } else if(data.code == 500){
+                    window.location.href = "500.html";
+                } else {
+                    alert(data.msg);
+                }
+            }
+        });
+
+
+    }
 
 </script>
 </body>
