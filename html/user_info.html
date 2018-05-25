@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人设置</title>
+    <script src="../static/assets/common-css.js"></script>
+    <script src="../static/assets/common-js.js"></script>
+</head>
+<body class="no-skin">
+<div id="navbar" class="navbar navbar-default">
+    <!--顶部-->
+    <div class="navbar-container" id="top"><!--navbar-container-->
+
+    </div>
+</div>
+<div class="main-container" id="main-container">
+
+    <!-- 左边的菜单 -->
+    <div id="left" class="sidebar responsive"><!--sidebar-->
+
+    </div>
+
+    <!-- 正文部分-->
+    <div class="main-content">
+        <!-- 导航栏相关开始-->
+        <div class="breadcrumbs" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="main.html">UI库首页</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">用户个人资料</a>
+                </li>
+            </ul>
+
+            <!-- #section:basics/content.searchbox   搜索部分开始=================== -->
+            <!--<div class="nav-search" id="nav-search">
+                <form class="form-search">
+                        <span class="input-icon">
+                            <input type="text" placeholder="请输入关键字 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                            <i class="ace-icon fa fa-search nav-search-icon"></i>
+                        </span>
+                </form>
+            </div>-->
+            <!-- /section:basics/content.searchbox   搜索部分结束===================-->
+        </div>
+        <!-- #section:basics/content.breadcrumbs   导航栏相关结束-->
+        <div class="page-content">
+
+            <div class="page-content-area">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="user-profile-2" class="user-profile">
+                            <div class="tabbable">
+                                <div class="tab-content no-border padding-24">
+                                    <div id="home" class="tab-pane in active">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-9">
+                                                <h4 class="blue">
+                                                    <span class="middle">王小胖</span>
+
+																<span class="label label-purple arrowed-in-right">
+																	<i class="icon-circle smaller-80 align-middle"></i>
+																	在线
+																</span>
+                                                </h4>
+
+                                                <div class="profile-user-info">
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 用户名 </div>
+
+                                                        <div class="profile-info-value">
+                                                            <span id="userName">alexdoe</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--<div class="profile-info-row">
+                                                        <div class="profile-info-name"> 地址 </div>
+
+                                                        <div class="profile-info-value">
+                                                            <i class="icon-map-marker light-orange bigger-110"></i>
+                                                            <span>广州市白云区</span>
+                                                            <span>云霄路88号</span>
+                                                        </div>
+                                                    </div>-->
+
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 邮箱 </div>
+
+                                                        <div class="profile-info-value">
+                                                            <span id="email"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 注册时间 </div>
+
+                                                        <div class="profile-info-value">
+                                                            <span id="createTime">20/06/2010</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 登陆时间 </div>
+
+                                                        <div class="profile-info-value">
+                                                            <span id="loginTime">20/06/2010</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 账号状态 </div>
+
+                                                        <div class="profile-info-value" id="status">
+                                                            <span class="label label-success">启用</span>
+                                                            <span class="label label-danger">禁用</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="hr hr-8 dotted"></div>
+                                            </div><!-- /span -->
+                                        </div><!-- /row-fluid -->
+                                    </div><!-- #home -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content-area -->
+
+        </div>
+    </div>
+
+    <!--底部-->
+    <div class="footer" id="footer">
+
+    </div>
+</div>
+<!--js-->
+<script type="text/javascript" src="../static/assets/base_code.js"></script>
+<script type="text/javascript" src="../static/assets/basic.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+
+        $('#footer').load('common/footer.html');
+        $('#left').load('common/left.html');
+        $('#top').load('common/top.html');
+        console.log(SESSIONID);
+        console.log(USER);
+
+        //绑定登陆信息
+
+        $("#userName").html(USER.userName);
+        var email = USER.email;
+        var loginTime = USER.loginTime;
+        var status = USER.status;
+        if (email == null || "" == email) {
+            email = "--";
+        }
+        if (loginTime == null || "" == loginTime) {
+            loginTime = "--";
+        }
+        if (status.length == 0) {
+            status = "--";
+        } else {
+            if (status == 0) {
+                status = '<span class="label label-success">启用</span>';
+            } else if(status == 1) {
+                status = '<span class="label label-danger">禁用</span>';
+            }
+        }
+        $("#email").html(email);
+        $("#createTime").html(USER.createTime.split(".0")[0]);
+        $("#loginTime").html(loginTime);
+
+        $("#status").html(status);
+    });
+
+</script>
+</body>
+</html>

@@ -27,10 +27,7 @@
                 <ul class="breadcrumb">
                     <li>
                         <i class="ace-icon fa fa-home home-icon"></i>
-                        <a href="index.html">UI库首页</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">空白页</a>
+                        <a href="main.html">UI库首页</a>
                     </li>
                 </ul>
 
@@ -46,6 +43,9 @@
                 <!-- /section:basics/content.searchbox   搜索部分结束===================-->
             </div>
             <!-- #section:basics/content.breadcrumbs   导航栏相关结束-->
+            <div class="row center">
+                <img src="../static/assets/img/logo_2.png" />
+            </div>
         </div>
 
         <!--底部-->
@@ -57,14 +57,22 @@
 
 
     <!--js-->
+    <script type="text/javascript" src="../static/assets/base_code.js"></script>
+    <script type="text/javascript" src="../static/assets/basic.js"></script>
     <script type="text/javascript">
 
-        $(document).ready(function () {
+        $(function () {
 
             $('#footer').load('common/footer.html');
             $('#left').load('common/left.html');
             $('#top').load('common/top.html');
+//            console.log(SESSIONID);
+//            console.log(USER);
+//            console.log(MENU);
 
+            //绑定登陆信息
+
+            $("#userInfo").html("欢迎您<br />"+USER.userName);
         });
 
     </script>

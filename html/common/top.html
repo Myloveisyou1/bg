@@ -135,9 +135,8 @@
         <li class="light-blue">
             <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                 <img class="nav-user-photo" src="../static/assets/images/user.jpg" alt="Jason's Photo" />
-								<span class="user-info">
-									欢迎您<br />
-									陈子昂
+								<span class="user-info" id="userInfo">
+
 								</span>
 
                 <i class="ace-icon fa fa-caret-down"></i>
@@ -152,7 +151,7 @@
                 </li>
 
                 <li>
-                    <a href="profile.html">
+                    <a href="user_info.html">
                         <i class="ace-icon fa fa-user"></i>
                         个人信息设置
                     </a>
@@ -161,7 +160,7 @@
                 <li class="divider"></li>
 
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="loginOut()">
                         <i class="ace-icon fa fa-power-off"></i>
                         登出
                     </a>
@@ -172,3 +171,35 @@
         <!-- /section:basics/navbar.user_menu -->
     </ul>
 </div>
+<script type="text/javascript">
+    $(function () {
+        $("#userInfo").html("欢迎您<br />"+USER.userName);
+    })
+
+    function loginOut() {
+        $.ajax({
+            url:URL+"loginOut",
+            type:"get",
+            dataType:"json",
+            data:{
+                sessionId:SESSIONID
+            },
+            success:function(data){
+                console.log(data);
+                if(data.code == 200) {
+                    //清除cookie
+                    clearCookie("SESSIONID");
+                    clearCookie("USER");
+                    clearCookie("AA");
+                    window.location.href = "login.html";
+                } else if(data.code == 404){
+                    window.location.href = "404.html";
+                } else if(data.code == 500){
+                    window.location.href = "500.html";
+                } else {
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+</script>
