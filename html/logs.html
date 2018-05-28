@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日志</title>
+    <script src="../static/assets/common-css.js"></script>
+    <script src="../static/assets/common-js.js"></script>
+</head>
+<body class="no-skin">
+<div id="navbar" class="navbar navbar-default">
+    <!--顶部-->
+    <div class="navbar-container" id="top"><!--navbar-container-->
+
+    </div>
+</div>
+<div class="main-container" id="main-container">
+
+    <!-- 左边的菜单 -->
+    <div id="left" class="sidebar responsive"><!--sidebar-->
+
+    </div>
+
+    <!-- 正文部分-->
+    <div class="main-content">
+        <!-- 导航栏相关开始-->
+        <div class="breadcrumbs" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="main.html">UI库首页</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">日志记录</a>
+                </li>
+            </ul>
+        </div>
+        <!-- #section:basics/content.breadcrumbs   导航栏相关结束-->
+        <div class="page-content">
+            <div class="page-content-area">
+                <div class="hr hr-18 dotted hr-double"></div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="table-header">
+                            日志记录
+                        </div>
+                        <div class="table-responsive">
+                            <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th class="center">
+                                        <label class="position-relative">
+                                            <input type="checkbox" class="ace" />
+                                            <span class="lbl"></span>
+                                        </label>
+                                    </th>
+                                    <th>请求地址</th>
+                                    <th>请求方式</th>
+                                    <th>请求IP</th>
+                                    <th>请求参数</th>
+                                    <th>请求开始时间</th>
+                                    <th>请求结束时间</th>
+                                    <th>消耗时间(s)</th>
+                                    <th>返回值</th>
+                                </tr>
+                                </thead>
+                                <tbody id="myTable">
+                                    <tr>
+                                        <td class="center">
+                                            <label class="position-relative">
+                                                <input type="checkbox" class="ace" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td>http://localhost:8081/loginOut</td>
+                                        <td>GET</td>
+                                        <td class="hidden-480">0:0:0:0:0:0:0:1</td>
+                                        <td>sessionId=46EFFA03053F27C7AF8737F587989350,</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>0</td>
+                                        <td>Result(code=200, msg=成功, data=true, page=null, totalCount=null)</td>
+                                        <td>
+                                            <div class="hidden-sm hidden-xs btn-group">
+                                                <button class="btn btn-xs btn-success" title="">
+                                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-info">
+                                                    <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-danger">
+                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-warning">
+                                                    <i class="ace-icon fa fa-flag bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-success">
+                                                    <i class="ace-icon fa fa-check bigger-120"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <label class="position-relative">
+                                                <input type="checkbox" class="ace" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td>http://localhost:8081/loginOut</td>
+                                        <td>GET</td>
+                                        <td class="hidden-480">0:0:0:0:0:0:0:1</td>
+                                        <td>sessionId=46EFFA03053F27C7AF8737F587989350,</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>0</td>
+                                        <td>Result(code=200, msg=成功, data=true, page=null, totalCount=null)</td>
+                                        <td>
+                                            <div class="hidden-sm hidden-xs btn-group">
+                                                <button class="btn btn-xs btn-success" title="">
+                                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-info">
+                                                    <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-danger">
+                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-warning">
+                                                    <i class="ace-icon fa fa-flag bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-success">
+                                                    <i class="ace-icon fa fa-check bigger-120"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <label class="position-relative">
+                                                <input type="checkbox" class="ace" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td>http://localhost:8081/loginOut</td>
+                                        <td>GET</td>
+                                        <td class="hidden-480">0:0:0:0:0:0:0:1</td>
+                                        <td>sessionId=46EFFA03053F27C7AF8737F587989350,</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>0</td>
+                                        <td>Result(code=200, msg=成功, data=true, page=null, totalCount=null)</td>
+                                        <td>
+                                            <div class="hidden-sm hidden-xs btn-group">
+                                                <button class="btn btn-xs btn-success" title="">
+                                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-info">
+                                                    <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-danger">
+                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-warning">
+                                                    <i class="ace-icon fa fa-flag bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-success">
+                                                    <i class="ace-icon fa fa-check bigger-120"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <label class="position-relative">
+                                                <input type="checkbox" class="ace" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td>http://localhost:8081/loginOut</td>
+                                        <td>GET</td>
+                                        <td class="hidden-480">0:0:0:0:0:0:0:1</td>
+                                        <td>sessionId=46EFFA03053F27C7AF8737F587989350,</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>0</td>
+                                        <td>Result(code=200, msg=成功, data=true, page=null, totalCount=null)</td>
+                                        <td>
+                                            <div class="hidden-sm hidden-xs btn-group">
+                                                <button class="btn btn-xs btn-success" title="">
+                                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-info">
+                                                    <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-danger">
+                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-warning">
+                                                    <i class="ace-icon fa fa-flag bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-success">
+                                                    <i class="ace-icon fa fa-check bigger-120"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <label class="position-relative">
+                                                <input type="checkbox" class="ace" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td>http://localhost:8081/loginOut</td>
+                                        <td>GET</td>
+                                        <td class="hidden-480">0:0:0:0:0:0:0:1</td>
+                                        <td>sessionId=46EFFA03053F27C7AF8737F587989350,</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>2018-05-28 11:35:10</td>
+                                        <td>0</td>
+                                        <td>Result(code=200, msg=成功, data=true, page=null, totalCount=null)</td>
+                                        <td>
+                                            <div class="hidden-sm hidden-xs btn-group">
+                                                <button class="btn btn-xs btn-success" title="">
+                                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-info">
+                                                    <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-danger">
+                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-warning">
+                                                    <i class="ace-icon fa fa-flag bigger-120"></i>
+                                                </button>
+
+                                                <button class="btn btn-xs btn-success">
+                                                    <i class="ace-icon fa fa-check bigger-120"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="modal-footer no-margin-top">
+
+                                <ul class="pagination pull-right no-margin" id="myPage">
+                                    <li class="prev disabled">
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-angle-double-left"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="active">
+                                        <a href="#">1</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+
+                                    <li class="next">
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-angle-double-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--底部-->
+    <div class="footer" id="footer">
+
+    </div>
+</div>
+
+
+
+<!--js-->
+<script type="text/javascript" src="../static/assets/base_code.js"></script>
+<script type="text/javascript" src="../static/assets/basic.js"></script>
+<script type="text/javascript">
+    var curPage = 0;
+    var totalPage = 0;
+    $(function () {
+
+        $('#footer').load('common/footer.html');
+        $('#left').load('common/left.html');
+        $('#top').load('common/top.html');
+        queryLogs(1);
+    });
+
+    function queryLogs(pageNum) {
+        curPage = pageNum;
+        var flag = false;
+        if(pageNum > 0){
+            if (pageNum == 1) {
+                flag = true;
+            }else if(pageNum <= totalPage) {
+                flag = true;
+            }
+        }
+
+        if(flag) {
+            $.ajax({
+                url:URL+"logs/logsList",
+                type:"get",
+                dataType:"json",
+                data:{
+                    sessionId:SESSIONID,
+                    pageNum:pageNum,
+                    pageSize:10
+                },
+                success:function(data){
+                    console.log(data);
+                    if(data.code == 200) {
+                        var result = data.data;
+                        var html = "",pages = "";
+                        if(result.length > 0) {
+                            for (var i=0;i<result.length;i++){
+                                html += '<tr>' +
+                                        '<td class="center"><label class="position-relative"><input type="checkbox" class="ace" /><span class="lbl"></span></label>' +
+                                        '</td>' +
+                                        '<td>'+result[i].url+'</td>' +
+                                        '<td>'+result[i].method+'</td>' +
+                                        '<td>'+result[i].ip+'</td>' +
+                                        '<td>'+result[i].args+'</td>' +
+                                        '<td>'+result[i].startTime+'</td>' +
+                                        '<td>'+result[i].endTime+'</td>' +
+                                        '<td>'+result[i].time+'</td>' +
+                                        '<td>'+result[i].repData+'</td>';
+                            }
+                            var page = data.page;
+                            var first = "",last = "";
+                            if(page.first) {
+                                first = "disabled";
+                            }
+                            pages += ' <li class="prev '+first+'">' +
+                                    '<a onclick="queryLogs('+(curPage-1)+')"> <i class="ace-icon fa fa-angle-double-left"></i></a></li>';
+                            totalPage = page.totalPage;
+                            if (totalPage >= 1) {
+                                for(var j=1;j<=totalPage;j++) {
+                                    var xuanzhong = "";
+                                    if(j == curPage) {
+                                        xuanzhong = 'active';
+                                    }
+                                    pages += '<li class="'+xuanzhong+'">' +
+                                            ' <a onclick="queryLogs('+j+')">'+j+'</a></li>';
+                                }
+                                if(curPage == totalPage) {
+                                    last = "disabled";
+                                }
+                                pages += '<li class="next '+last+'">' +
+                                        '<a onclick="queryLogs('+(curPage+1)+')"><i class="ace-icon fa fa-angle-double-right"></i></a></li>';
+                            }
+                        } else {
+                            html += '<tr><td colspan="100" style="align-content: center">暂无数据</td></tr>';
+                        }
+                        $("#myTable").html(html);
+                        $("#myPage").html(pages);
+                    } else if(data.code == 404){
+                        window.location.href = "404.html";
+                    } else if(data.code == 500){
+                        window.location.href = "500.html";
+                    } else {
+                        alert(data.msg);
+                    }
+                }
+            });
+        }
+    }
+
+</script>
+</body>
+</html>
